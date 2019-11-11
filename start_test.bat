@@ -9,3 +9,4 @@ exit
 echo variable not set
 newman run %~dp0\autotest.json -d %~dp0\data.json
 :exit
+pause
