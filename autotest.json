@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "feb54143-3f1e-4e2c-9ffa-b5bc1324442d",
+		"name": "csssr",
+		"description": "Get all list superhero.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_URL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "492feb8f-d068-4476-bbac-22f01bf9f757",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"+74998884433\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				},
+				"description": "Get list of all heroes "
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "56f49bb1-03ac-4625-8243-0eb1de7d7816",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7b5770aa-512d-4f7f-b725-1fb12366ac9f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
